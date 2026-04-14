@@ -1,18 +1,22 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
 
 /**
  * Styles
  */
-import '@/index.css'
+import '@/index.css';
 
 /**
  * Components
  */
-import { App } from '@/App.tsx'
+import { App } from '@/App.tsx';
+import Sidebar from '@/components/custom/Sidebar';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <div className='min-h-screen lg:flex lg:justify-center lg:items-start lg:gap-10'>
+      <Sidebar/>
+      <App />
+    </div>
   </StrictMode>,
-)
+);
