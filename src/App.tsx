@@ -3,6 +3,7 @@ import Stats from '@/components/custom/Stats';
 import Projects from '@/components/custom/Projects';
 import About from '@/components/custom/About';
 import Services from '@/components/custom/Services';
+import Resume from '@/components/custom/Resume';
 
 export const App = () => {
   return (
@@ -12,6 +13,7 @@ export const App = () => {
       <Projects />
       <About />
       <Services />
+      <Resume />
     </main>
   );
 };
