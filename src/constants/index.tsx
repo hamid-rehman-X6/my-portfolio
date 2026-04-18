@@ -16,11 +16,9 @@ import type {
  */
 import {
   Briefcase,
-  //   Facebook,
   FileText,
   Globe,
   Home,
-  //   Instagram,
   Layers,
   Mail,
   MessageCircle,
@@ -28,10 +26,13 @@ import {
   Rocket,
   Settings,
   Smartphone,
-  //   Twitter,
   User,
-  //   Youtube,
 } from 'lucide-react';
+
+import { LuFacebook } from 'react-icons/lu';
+import { LuInstagram } from 'react-icons/lu';
+import { LuTwitter } from 'react-icons/lu';
+import { LuYoutube } from 'react-icons/lu';
 
 const navLinks: LinksType[] = [
   { label: 'Home', link: '#hero', icon: Home },
@@ -57,22 +58,22 @@ const navLinks: LinksType[] = [
 
 const socialLinks: LinksType[] = [
   {
-    icon: Settings,
+    icon: LuFacebook,
     label: 'Facebook',
     link: '/#',
   },
   {
-    icon: Settings,
+    icon: LuInstagram,
     label: 'Instagram',
     link: '/#',
   },
   {
-    icon: Settings,
+    icon: LuTwitter,
     label: 'Twitter',
     link: '/#',
   },
   {
-    icon: Settings,
+    icon: LuYoutube,
     label: 'Youtube',
     link: '/#',
   },
