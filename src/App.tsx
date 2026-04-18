@@ -2,6 +2,7 @@ import Hero from '@/components/custom/Hero';
 import Stats from '@/components/custom/Stats';
 import Projects from '@/components/custom/Projects';
 import About from '@/components/custom/About';
+import Services from '@/components/custom/Services';
 
 export const App = () => {
   return (
@@ -10,6 +11,7 @@ export const App = () => {
       <Stats />
       <Projects />
       <About />
+      <Services />
     </main>
   );
 };
