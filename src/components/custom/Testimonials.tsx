@@ -1,11 +1,27 @@
 import { testimonials } from '@/constants';
 import { fadeUp } from '@/lib/animations';
-import { SparkleIcon, StarIcon } from 'lucide-react';
+import {
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  SparkleIcon,
+  StarIcon,
+} from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 import { useState } from 'react';
+import { Button } from '../ui/button';
 
 const Testimonials = () => {
   const [curSlide, setCurSlide] = useState(0);
+
+  const next = () => {
+    setCurSlide((prev) => (prev + 1) % testimonials?.length);
+  };
+
+  const prev = () => {
+    setCurSlide(
+      (prev) => (prev - 1 + testimonials.length) % testimonials?.length,
+    );
+  };
 
   return (
     <motion.section
@@ -27,10 +43,10 @@ const Testimonials = () => {
         <AnimatePresence mode='wait'>
           <motion.div
             key={curSlide}
-            initial={{}}
-            animate={{}}
-            exit={{}}
-            transition={{}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
             layout
             className='flex flex-col md:flex-row items-start gap-6 border border-neutral-800 rounded-3xl p-8 bg-neutral-900/10'
           >
@@ -49,7 +65,7 @@ const Testimonials = () => {
                   {testimonials[curSlide].role}
                 </p>
 
-                <div className='flex gap-1 mt-3 text-yellow-400'>
+                <div className='flex gap-1 my-3 text-yellow-400'>
                   {Array.from({ length: 5 }).map((_, i) => (
                     <StarIcon
                       key={i}
@@ -58,10 +74,35 @@ const Testimonials = () => {
                     />
                   ))}
                 </div>
+                <p className='text-neutral-300 leading-relaxed'>
+                  {testimonials[curSlide].text}
+                </p>
+
+                <a
+                  href={testimonials[curSlide].link}
+                  className='inline-flex items-center text-sm font-medium gap-1 mt-6 text-neutral-400 hover:text-green-400'
+                >
+                  Projects →
+                </a>
               </div>
             </div>
           </motion.div>
         </AnimatePresence>
+
+        <div className='flex gap-4 mt-8'>
+          <Button
+            onClick={prev}
+            className='size-10 flex items-center justify-center border border-neutral-700 rounded-full bg-neutral-950 hover:bg-neutral-800 text-white cursor-pointer transition'
+          >
+            <ChevronLeftIcon size={18} />
+          </Button>
+          <Button
+            onClick={next}
+            className='size-10 flex items-center justify-center border border-neutral-700 rounded-full bg-neutral-950 hover:bg-neutral-800 text-white cursor-pointer transition'
+          >
+            <ChevronRightIcon size={18} />
+          </Button>
+        </div>
       </div>
     </motion.section>
   );
