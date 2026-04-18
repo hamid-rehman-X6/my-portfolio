@@ -11,7 +11,7 @@ const Profile = () => {
         </div>
 
         <img
-          src={true ? '/mhr.jpeg' : '/avatar.jpg'}
+          src={'/mhr.jpeg'}
           alt='Hamid'
           className='lg:w-96 rounded-2xl object-cover'
         />

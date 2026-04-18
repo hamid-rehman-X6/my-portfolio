@@ -7,17 +7,25 @@ import Resume from '@/components/custom/Resume';
 import Testimonials from '@/components/custom/Testimonials';
 import Contact from '@/components/custom/Contact';
 import Lenis from 'lenis';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 export const App = () => {
-  const lenis = new Lenis();
+  const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
-    function raf(time: any) {
-      lenis.raf(time);
+    lenisRef.current = new Lenis();
+
+    function raf(time: DOMHighResTimeStamp) {
+      lenisRef.current?.raf(time);
       requestAnimationFrame(raf);
     }
+
     requestAnimationFrame(raf);
+
+    return () => {
+      lenisRef.current?.destroy();
+      lenisRef.current = null;
+    };
   }, []);
 
   return (

@@ -2,7 +2,7 @@ import { fadeUp } from '@/lib/animations';
 import type { ProjectType } from '@/types';
 import { motion } from 'motion/react';
 
-const ProjectCard = ({ imgSrc, projectLink, title, tags }: ProjectType) => {
+const ProjectCard = ({ imgSrc, title, tags }: ProjectType) => {
   return (
     <>
       <motion.div
