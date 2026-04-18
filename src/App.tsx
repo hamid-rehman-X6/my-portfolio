@@ -5,6 +5,7 @@ import About from '@/components/custom/About';
 import Services from '@/components/custom/Services';
 import Resume from '@/components/custom/Resume';
 import Testimonials from '@/components/custom/Testimonials';
+import Contact from '@/components/custom/Contact';
 
 export const App = () => {
   return (
@@ -16,6 +17,7 @@ export const App = () => {
       <Services />
       <Resume />
       <Testimonials />
+      <Contact />
     </main>
   );
 };
