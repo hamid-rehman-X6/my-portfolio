@@ -12,7 +12,7 @@ import type {
 } from '@/types';
 
 /**
- * Assets
+ * Icons
  */
 import {
   Briefcase,
@@ -33,6 +33,25 @@ import { LuFacebook } from 'react-icons/lu';
 import { LuInstagram } from 'react-icons/lu';
 import { LuTwitter } from 'react-icons/lu';
 import { LuYoutube } from 'react-icons/lu';
+
+/**
+ * Assets
+ */
+// Projects
+import projectImg1 from '@/assets/images/project-ph-1.jpeg';
+import projectImg2 from '@/assets/images/project-ph-2.jpeg';
+import projectImg3 from '@/assets/images/project-ph-3.jpeg';
+import projectImg4 from '@/assets/images/project-ph-4.jpeg';
+
+// Tools
+import figma from '@/assets/images/tools/figma.svg';
+import css from '@/assets/images/tools/css3.svg';
+import tailwindcss from '@/assets/images/tools/tailwindcss.svg';
+import react from '@/assets/images/tools/react.svg';
+import javascript from '@/assets/images/tools/javascript.svg';
+import nodejs from '@/assets/images/tools/nodejs.svg';
+import expressjs from '@/assets/images/tools/expressjs.svg';
+import mongodb from '@/assets/images/tools/mongodb.svg';
 
 const navLinks: LinksType[] = [
   { label: 'Home', link: '#hero', icon: Home },
@@ -81,25 +100,25 @@ const socialLinks: LinksType[] = [
 
 const projectsData: ProjectType[] = [
   {
-    imgSrc: '/images/project-ph-1.jpeg',
+    imgSrc: projectImg1,
     title: 'Full stack music app',
     tags: ['API', 'Development'],
     projectLink: 'https://musify-5al0.onrender.com/',
   },
   {
-    imgSrc: '/images/project-ph-2.jpeg',
+    imgSrc: projectImg2,
     title: 'Full stack music app',
     tags: ['API', 'Development'],
     projectLink: 'https://musify-5al0.onrender.com/',
   },
   {
-    imgSrc: '/images/project-ph-3.jpeg',
+    imgSrc: projectImg3,
     title: 'Full stack music app',
     tags: ['API', 'Development'],
     projectLink: 'https://musify-5al0.onrender.com/',
   },
   {
-    imgSrc: '/images/project-ph-4.jpeg',
+    imgSrc: projectImg4,
     title: 'Full stack music app',
     tags: ['API', 'Development'],
     projectLink: 'https://musify-5al0.onrender.com/',
@@ -145,35 +164,35 @@ const experience: ExperienceType[] = [
 const tools: ToolsType[] = [
   {
     label: 'Figma',
-    imgSrc: '/images/tools/figma.svg',
+    imgSrc: figma,
   },
   {
     label: 'CSS',
-    imgSrc: '/images/tools/css3.svg',
+    imgSrc: css,
   },
   {
     label: 'Tailwind CSS',
-    imgSrc: '/images/tools/tailwindcss.svg',
+    imgSrc: tailwindcss,
   },
   {
     label: 'React',
-    imgSrc: '/images/tools/react.svg',
+    imgSrc: react,
   },
   {
     label: 'JavaScript',
-    imgSrc: '/images/tools/javascript.svg',
+    imgSrc: javascript,
   },
   {
     label: 'Node.js',
-    imgSrc: '/images/tools/nodejs.svg',
+    imgSrc: nodejs,
   },
   {
     label: 'Express.js',
-    imgSrc: '/images/tools/expressjs.svg',
+    imgSrc: expressjs,
   },
   {
     label: 'Mongodb',
-    imgSrc: '/images/tools/mongodb.svg',
+    imgSrc: mongodb,
   },
 ];
 

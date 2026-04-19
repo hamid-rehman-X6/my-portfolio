@@ -1,5 +1,6 @@
 import { socialLinks } from '@/constants';
 import { Button } from '../ui/button';
+import profileImg from '@/assets/mhr.jpeg';
 
 const Profile = () => {
   return (
@@ -11,7 +12,7 @@ const Profile = () => {
         </div>
 
         <img
-          src={'/mhr.jpeg'}
+          src={profileImg}
           alt='Hamid'
           className='lg:w-96 rounded-2xl object-cover'
         />
