@@ -15,9 +15,9 @@ const Sidebar = () => {
           <Button
             size='icon'
             variant='ghost'
-            className='fixed m-4 top-4 right-4 z-50 border-2 bg-neutral-800 hover:border-primary hover:text-primary px-5 py-5 rounded-full cursor-pointer'
+            className='fixed m-4 top-4 right-4 z-50 border-2 bg-neutral-800 hover:border-primary hover:text-primary w-12 h-12 rounded-full cursor-pointer'
           >
-            <MenuIcon size={30} />
+            <MenuIcon size={20} />
           </Button>
         </SheetTrigger>
 
