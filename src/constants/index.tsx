@@ -135,36 +135,42 @@ const projectsData: ProjectType[] = [
 const education: ExperienceType[] = [
   {
     year: '2018 – 2020',
-    title: 'Bachelor of Computer Science',
-    institute: 'National University of Technology',
-    desc: 'Focused on front-end development, UI design, and web application architecture.',
+    title: 'Fsc Pre-Engineering',
+    institute: 'Punjab Groups of College',
+    desc: '',
   },
   {
-    year: '2021 – 2022',
-    title: 'Frontend Development Bootcamp',
-    institute: 'Udemy / Online Course',
-    desc: 'Learned modern JavaScript, React, and responsive UI patterns through real-world projects.',
-  },
-  {
-    year: '2023',
-    title: 'Advanced UI/UX Design Course',
-    institute: 'Design+Code',
-    desc: 'Explored advanced design systems, motion design, and accessibility best practices.',
+    year: '2020 – 2024',
+    title: 'Bachelors of Science in Information Technology',
+    institute: 'University of Education',
+    desc: '',
   },
 ];
 
 const experience: ExperienceType[] = [
   {
-    year: '2021 – 2022',
-    title: 'Frontend Developer Intern',
-    institute: 'PixelForge Studio',
-    desc: 'Built and optimized responsive websites, collaborating closely with designers and backend teams.',
+    year: '2022 – 2023',
+    title: 'Mern Stack Trainee',
+    institute: 'Knowledge Streams',
+    desc: '',
   },
   {
-    year: '2022 – Present',
-    title: 'UI Engineer',
-    institute: 'Freelance / Remote Work',
-    desc: 'Designed and developed web interfaces for SaaS startups using React, Tailwind, and Figma.',
+    year: '2024 – 2025',
+    title: 'Mern Stack Intern',
+    institute: 'Convier Solutions',
+    desc: '',
+  },
+  {
+    year: '2025 – 2026',
+    title: 'Associate Software Engineer - I',
+    institute: 'Convier Solutions',
+    desc: '',
+  },
+  {
+    year: '2026 – Present',
+    title: 'Associate Software Engineer - II',
+    institute: 'Techanzy Limited',
+    desc: '',
   },
 ];
 
@@ -238,15 +244,15 @@ const services: ServiceType[] = [
 
 const statsData: StatsType[] = [
   {
-    number: '30+',
+    number: '5+',
     label: 'Happy Clients',
   },
   {
-    number: '05+',
+    number: '03+',
     label: 'Years Of Experience',
   },
   {
-    number: '50+',
+    number: '10+',
     label: 'Projects Done',
   },
 ];
