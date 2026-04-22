@@ -13,6 +13,7 @@ import { Button } from '@/components/ui/button';
 import SectionHeaders from './SectionHeaders';
 import type { ContactFormValues } from '@/types';
 import { fadeUp } from '@/lib/animations';
+import { FORMSPREE_ENDPOINT } from '@/lib/formspree';
 
 const Contact = () => {
   const form = useForm<ContactFormValues>({
@@ -25,8 +26,27 @@ const Contact = () => {
     },
   });
 
-  const onSubmit = (values: ContactFormValues) => {
-    console.log(values);
+  const onSubmit = async (values: ContactFormValues) => {
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+      if (response.ok) {
+        form.reset();
+        alert('Message sent successfully!');
+      } else {
+        alert('Failed to send message. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      alert(
+        'An error occurred while sending the message. Please try again later.',
+      );
+    }
   };
 
   return (
