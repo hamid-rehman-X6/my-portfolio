@@ -38,10 +38,11 @@ import { LuYoutube } from 'react-icons/lu';
  * Assets
  */
 // Projects
-import projectImg1 from '@/assets/images/project-ph-1.jpeg';
-import projectImg2 from '@/assets/images/project-ph-2.jpeg';
-import projectImg3 from '@/assets/images/project-ph-3.jpeg';
-import projectImg4 from '@/assets/images/project-ph-4.jpeg';
+import projectImg1 from '@/assets/images/auction_image_1.png';
+import projectImg2 from '@/assets/images/sportinerd_image_1.png';
+import projectImg3 from '@/assets/images/smart_agent.png';
+import projectImg4 from '@/assets/images/blog_api_image_2.png';
+import projectImg5 from '@/assets/images/fedcrim_thumbnail.png';
 
 // Tools
 import figma from '@/assets/images/tools/figma.svg';
@@ -101,27 +102,33 @@ const socialLinks: LinksType[] = [
 const projectsData: ProjectType[] = [
   {
     imgSrc: projectImg1,
-    title: 'Full stack music app',
-    tags: ['API', 'Development'],
-    projectLink: 'https://musify-5al0.onrender.com/',
+    title: 'Full Stack Enterprise Auction Platform',
+    tags: ['Full Stack MERN Application'],
+    projectLink: '#',
   },
   {
     imgSrc: projectImg2,
-    title: 'Full stack music app',
-    tags: ['API', 'Development'],
-    projectLink: 'https://musify-5al0.onrender.com/',
+    title: 'Sportinerd – The Ultimate Sports Intelligence Platform',
+    tags: ['Frontend', 'Next.js', 'Tailwind CSS', 'Figma Design'],
+    projectLink: 'https://sportinerd.com/',
   },
   {
     imgSrc: projectImg3,
-    title: 'Full stack music app',
-    tags: ['API', 'Development'],
-    projectLink: 'https://musify-5al0.onrender.com/',
+    title: 'Smart Agent – AI-Powered Personal Assistant',
+    tags: ['Langchain', 'RAG AI', 'OpenAI LLM', 'Python'],
+    projectLink: '#',
   },
   {
     imgSrc: projectImg4,
-    title: 'Full stack music app',
-    tags: ['API', 'Development'],
-    projectLink: 'https://musify-5al0.onrender.com/',
+    title: 'Blog API',
+    tags: ['Backend', 'REST API', 'Node.js', 'Typescript'],
+    projectLink: '#',
+  },
+  {
+    imgSrc: projectImg5,
+    title: 'Fedcrim.ai – AI Workflow Platform for Federal Criminal Defense',
+    tags: ['Frontend', 'React.js', 'Tailwind CSS', 'Figma Design'],
+    projectLink: 'https://www.fedcrim.ai/',
   },
 ];
 
