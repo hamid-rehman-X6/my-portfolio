@@ -35,7 +35,18 @@ const Hero = () => {
         <Button asChild>
           <a href='#projects'> View Projects</a>
         </Button>
-        <Button variant='outline'>Download Resume</Button>
+        <Button
+          variant='outline'
+          asChild
+        >
+          <a
+            href='/my-portfolio/resume/Hamid_SE-26.pdf'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Download Resume
+          </a>
+        </Button>
       </motion.div>
     </motion.section>
   );
