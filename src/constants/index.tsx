@@ -8,6 +8,7 @@ import type {
   ServiceType,
   StatsType,
   TestimonialsType,
+  ToolCategory,
   ToolsType,
 } from '@/types';
 
@@ -46,14 +47,35 @@ import projectImg4 from '@/assets/images/blog_api_image_2.png';
 import projectImg5 from '@/assets/images/fedcrim_thumbnail.png';
 
 // Tools
-import figma from '@/assets/images/tools/figma.svg';
+import antigravity from '@/assets/images/tools/antigravity.svg';
 import css from '@/assets/images/tools/css3.svg';
-import tailwindcss from '@/assets/images/tools/tailwindcss.svg';
-import react from '@/assets/images/tools/react.svg';
-import javascript from '@/assets/images/tools/javascript.svg';
-import nodejs from '@/assets/images/tools/nodejs.svg';
+import cursorLight from '@/assets/images/tools/cursor_light.svg';
+import docker from '@/assets/images/tools/docker.svg';
 import expressjs from '@/assets/images/tools/expressjs.svg';
+import figma from '@/assets/images/tools/figma.svg';
+import git from '@/assets/images/tools/git.svg';
+import githubLight from '@/assets/images/tools/github_light.svg';
+import html5 from '@/assets/images/tools/html5.svg';
+import javascript from '@/assets/images/tools/javascript.svg';
+import jwt from '@/assets/images/tools/jwt.svg';
 import mongodb from '@/assets/images/tools/mongodb.svg';
+import motion from '@/assets/images/tools/motion.svg';
+import mysqlIconLight from '@/assets/images/tools/mysql-icon-light.svg';
+import nestjs from '@/assets/images/tools/nestjs.svg';
+import nextjs from '@/assets/images/tools/nextjs-light.svg';
+import nodejs from '@/assets/images/tools/nodejs.svg';
+import openai from '@/assets/images/tools/openai.svg';
+import postgresql from '@/assets/images/tools/postgresql.svg';
+import postman from '@/assets/images/tools/postman.svg';
+import prisma from '@/assets/images/tools/prisma.svg';
+import python from '@/assets/images/tools/python.svg';
+import react from '@/assets/images/tools/react.svg';
+import redis from '@/assets/images/tools/redis.svg';
+import redux from '@/assets/images/tools/redux.svg';
+import socketioIconLight from '@/assets/images/tools/socketio.svg';
+import tailwindcss from '@/assets/images/tools/tailwindcss.svg';
+import typescriptIcon from '@/assets/images/tools/typescript.svg';
+import vscode from '@/assets/images/tools/vscode.svg';
 
 const navLinks: LinksType[] = [
   { label: 'Home', link: '#hero', icon: Home },
@@ -201,6 +223,243 @@ const tools: ToolsType[] = [
   {
     label: 'Mongodb',
     imgSrc: mongodb,
+  },
+  {
+    label: 'TypeScript',
+    imgSrc: typescriptIcon,
+  },
+  {
+    label: 'PostgreSQL',
+    imgSrc: postgresql,
+  },
+  {
+    label: 'MySQL',
+    imgSrc: mysqlIconLight,
+  },
+  {
+    label: 'Redis',
+    imgSrc: redis,
+  },
+  {
+    label: 'Docker',
+    imgSrc: docker,
+  },
+  {
+    label: 'Git',
+    imgSrc: git,
+  },
+  {
+    label: 'GitHub',
+    imgSrc: githubLight,
+  },
+  {
+    label: 'VS Code',
+    imgSrc: vscode,
+  },
+  {
+    label: 'Next.js',
+    imgSrc: nextjs,
+  },
+  {
+    label: 'NestJS',
+    imgSrc: nestjs,
+  },
+  {
+    label: 'Prisma',
+    imgSrc: prisma,
+  },
+  {
+    label: 'Postman',
+    imgSrc: postman,
+  },
+  {
+    label: 'OpenAI',
+    imgSrc: openai,
+  },
+  {
+    label: 'Redux',
+    imgSrc: redux,
+  },
+  {
+    label: 'Socket.IO',
+    imgSrc: socketioIconLight,
+  },
+  {
+    label: 'JWT',
+    imgSrc: jwt,
+  },
+  {
+    label: 'Framer Motion',
+    imgSrc: motion,
+  },
+  {
+    label: 'Python',
+    imgSrc: python,
+  },
+  {
+    label: 'HTML5',
+    imgSrc: html5,
+  },
+  {
+    label: 'Antigravity',
+    imgSrc: antigravity,
+  },
+  {
+    label: 'Cursor',
+    imgSrc: cursorLight,
+  },
+];
+
+export const toolsData: ToolCategory[] = [
+  {
+    id: 'frontend',
+    label: 'Frontend',
+    tools: [
+      {
+        label: 'HTML5',
+        imgSrc: html5,
+      },
+      {
+        label: 'CSS',
+        imgSrc: css,
+      },
+      {
+        label: 'Tailwind CSS',
+        imgSrc: tailwindcss,
+      },
+      {
+        label: 'JavaScript',
+        imgSrc: javascript,
+      },
+      {
+        label: 'TypeScript',
+        imgSrc: typescriptIcon,
+      },
+      {
+        label: 'React',
+        imgSrc: react,
+      },
+      {
+        label: 'Next.js',
+        imgSrc: nextjs,
+      },
+      {
+        label: 'Redux',
+        imgSrc: redux,
+      },
+      {
+        label: 'Framer Motion',
+        imgSrc: motion,
+      },
+    ],
+  },
+
+  {
+    id: 'backend',
+    label: 'Backend',
+    tools: [
+      {
+        label: 'Node.js',
+        imgSrc: nodejs,
+      },
+      {
+        label: 'Express.js',
+        imgSrc: expressjs,
+      },
+      {
+        label: 'NestJS',
+        imgSrc: nestjs,
+      },
+      {
+        label: 'JWT',
+        imgSrc: jwt,
+      },
+      {
+        label: 'Socket.IO',
+        imgSrc: socketioIconLight,
+      },
+    ],
+  },
+
+  {
+    id: 'database',
+    label: 'Database',
+    tools: [
+      {
+        label: 'MongoDB',
+        imgSrc: mongodb,
+      },
+      {
+        label: 'PostgreSQL',
+        imgSrc: postgresql,
+      },
+      {
+        label: 'MySQL',
+        imgSrc: mysqlIconLight,
+      },
+      {
+        label: 'Redis',
+        imgSrc: redis,
+      },
+      {
+        label: 'Prisma',
+        imgSrc: prisma,
+      },
+    ],
+  },
+
+  {
+    id: 'tools',
+    label: 'Tools',
+    tools: [
+      {
+        label: 'Git',
+        imgSrc: git,
+      },
+      {
+        label: 'GitHub',
+        imgSrc: githubLight,
+      },
+      {
+        label: 'VS Code',
+        imgSrc: vscode,
+      },
+      {
+        label: 'Postman',
+        imgSrc: postman,
+      },
+      {
+        label: 'Docker',
+        imgSrc: docker,
+      },
+      {
+        label: 'Figma',
+        imgSrc: figma,
+      },
+      {
+        label: 'Cursor',
+        imgSrc: cursorLight,
+      },
+    ],
+  },
+
+  {
+    id: 'ai',
+    label: 'AI',
+    tools: [
+      {
+        label: 'OpenAI',
+        imgSrc: openai,
+      },
+      {
+        label: 'Python',
+        imgSrc: python,
+      },
+      {
+        label: 'Antigravity',
+        imgSrc: antigravity,
+      },
+    ],
   },
 ];
 

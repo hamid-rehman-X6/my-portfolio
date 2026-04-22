@@ -26,6 +26,12 @@ export type ToolsType = {
   label: string;
 };
 
+export type ToolCategory = {
+  id: string;
+  label: string;
+  tools: ToolsType[];
+};
+
 export type StatsType = {
   number: string;
   label: string;

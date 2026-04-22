@@ -1,11 +1,18 @@
 import { fadeUp, staggerContainer } from '@/lib/animations';
-import { motion } from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react';
 import SectionHeaders from './SectionHeaders';
-import { education, experience, tools } from '@/constants';
 import ExpCard from './ExpCard';
 import ToolsCard from './ToolsCard';
+import { useMemo, useState } from 'react';
+import { education, experience, toolsData } from '@/constants';
 
 const Resume = () => {
+  const [activeTab, setActiveTab] = useState('frontend');
+
+  const activeTools = useMemo(() => {
+    return toolsData.find((item) => item.id === activeTab)?.tools || [];
+  }, [activeTab]);
+
   return (
     <motion.section
       initial='hidden'
@@ -74,19 +81,49 @@ const Resume = () => {
         </motion.h2>
 
         <motion.div
-          initial='hidden'
-          whileInView='visible'
-          viewport={{ once: true, amount: 0.3 }}
-          variants={staggerContainer(0.5)}
-          className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5'
+          variants={fadeUp}
+          className='flex flex-wrap gap-3 mb-10'
         >
-          {tools.map((tool, i) => (
-            <ToolsCard
-              key={i}
-              tool={tool}
-            />
-          ))}
+          {toolsData?.map((tab) => {
+            const isActive = activeTab === tab.id;
+
+            return (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`
+                  px-5 py-2 rounded-full border transition-all duration-300 cursor-pointer
+                  ${
+                    isActive
+                      ? 'bg-white text-black border-white'
+                      : 'border-neutral-700 text-neutral-300 hover:border-white hover:text-white'
+                  }
+                `}
+              >
+                {tab.label}
+              </button>
+            );
+          })}
         </motion.div>
+
+        {/* Tools Grid */}
+        <AnimatePresence mode='wait'>
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5'
+          >
+            {activeTools?.map((tool, i) => (
+              <ToolsCard
+                key={i}
+                tool={tool}
+              />
+            ))}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </motion.section>
   );
