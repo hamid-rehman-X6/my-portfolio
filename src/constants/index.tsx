@@ -16,6 +16,7 @@ import type {
  */
 import {
   Briefcase,
+  Database,
   FileText,
   Globe,
   Home,
@@ -25,7 +26,7 @@ import {
   Palette,
   Rocket,
   Settings,
-  Smartphone,
+  Sparkles,
   User,
 } from 'lucide-react';
 
@@ -205,34 +206,40 @@ const tools: ToolsType[] = [
 
 const services: ServiceType[] = [
   {
-    title: 'Brand Identity',
-    desc: 'I craft modern visual identities that help brands stand out through strong typography, colors, and minimal design.',
-    projects: '32 Projects',
-    icon: <Palette className='h-6 w-6 text-green-400' />,
-  },
-  {
-    title: 'UI/UX Design',
-    desc: 'Designing clean, intuitive, and user-friendly interfaces that improve user experience and boost conversions.',
-    projects: '47 Projects',
+    title: 'Frontend Development',
+    desc: 'Building responsive, high-performance user interfaces using React, Next.js, and Tailwind with a focus on UX and performance.',
+    projects: '',
     icon: <Layers className='h-6 w-6 text-green-400' />,
   },
   {
-    title: 'Web Development',
-    desc: 'Building high-performance, SEO-friendly websites using Next.js, Tailwind, and modern web technologies.',
-    projects: '58 Projects',
+    title: 'Backend Development',
+    desc: 'Designing scalable APIs and server-side logic using Node.js, Express, and modern backend architectures.',
+    projects: '',
     icon: <Globe className='h-6 w-6 text-green-400' />,
   },
   {
-    title: 'Mobile App Design',
-    desc: 'Creating pixel-perfect app interfaces optimized for both iOS and Android devices with smooth usability.',
-    projects: '21 Projects',
-    icon: <Smartphone className='h-6 w-6 text-green-400' />,
+    title: 'Database Design',
+    desc: 'Structuring efficient and scalable databases using MongoDB and SQL with optimized queries and data modeling.',
+    projects: '',
+    icon: <Database className='h-6 w-6 text-green-400' />,
   },
   {
-    title: 'Product Launch Strategy',
-    desc: 'Helping startups prepare their digital products for launch with design systems, marketing pages, and assets.',
-    projects: '15 Projects',
+    title: 'UI/UX Design',
+    desc: 'Designing clean, intuitive interfaces with a strong focus on usability, accessibility, and modern design systems.',
+    projects: '',
+    icon: <Palette className='h-6 w-6 text-green-400' />,
+  },
+  {
+    title: 'Deployment & CI/CD',
+    desc: 'Setting up automated pipelines, deployments, and cloud environments for reliable and scalable application delivery.',
+    projects: '',
     icon: <Rocket className='h-6 w-6 text-green-400' />,
+  },
+  {
+    title: 'AI Agents & LLM Apps',
+    desc: 'Building intelligent applications using LangChain, RAG pipelines, and LLMs for chatbots and automation workflows.',
+    projects: '',
+    icon: <Sparkles className='h-6 w-6 text-green-400' />,
   },
 ];
 
