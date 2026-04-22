@@ -24,7 +24,7 @@ const Resume = () => {
         variants={fadeUp}
         className='mt-4 text-neutral-300'
       >
-        With the background of a Bachelor's degree in Computer Science and
+        With the background of a Bachelor's degree in Information Technology and
         hands-on experience in full-stack development. I have successfully
         contributed to the development of responsive web applications, optimized
         backend processes, and collaborated with cross-functional teams to

@@ -136,41 +136,35 @@ const education: ExperienceType[] = [
   {
     year: '2018 – 2020',
     title: 'Fsc Pre-Engineering',
-    institute: 'Punjab Groups of College',
-    desc: '',
+    institute: 'Punjab Group of Colleges',
+    desc: 'Built a strong foundation in mathematics, physics, and analytical problem-solving.',
   },
   {
     year: '2020 – 2024',
     title: 'Bachelors of Science in Information Technology',
     institute: 'University of Education',
-    desc: '',
+    desc: 'Focused on software engineering, web development, and scalable system design using modern technologies.',
   },
 ];
 
 const experience: ExperienceType[] = [
   {
     year: '2022 – 2023',
-    title: 'Mern Stack Trainee',
+    title: 'MERN Stack Trainee',
     institute: 'Knowledge Streams',
-    desc: '',
+    desc: 'Built full-stack applications using MongoDB, Express, React, and Node.js while strengthening core JavaScript and API development skills.',
   },
   {
     year: '2024 – 2025',
-    title: 'Mern Stack Intern',
+    title: 'MERN Stack Intern',
     institute: 'Convier Solutions',
-    desc: '',
+    desc: 'Worked on production-level features, REST APIs, and responsive UI components, collaborating with team workflows and version control.',
   },
   {
     year: '2025 – 2026',
     title: 'Associate Software Engineer - I',
     institute: 'Convier Solutions',
-    desc: '',
-  },
-  {
-    year: '2026 – Present',
-    title: 'Associate Software Engineer - II',
-    institute: 'Techanzy Limited',
-    desc: '',
+    desc: 'Developing scalable web applications, optimizing performance, and contributing to system design and maintainable code architecture.',
   },
 ];
 
