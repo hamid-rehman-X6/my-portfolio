@@ -7,10 +7,14 @@ import { cn } from '@/lib/utils';
 
 const Sidebar = () => {
   const [active, setActive] = useState('#hero');
+  const [openSideBar, setOpenSideBar] = useState<boolean>(false);
 
   return (
     <>
-      <Sheet>
+      <Sheet
+        open={openSideBar}
+        onOpenChange={setOpenSideBar}
+      >
         <SheetTrigger asChild>
           <Button
             size='icon'
@@ -37,7 +41,10 @@ const Sidebar = () => {
                 <a
                   href={link.link}
                   key={link.label}
-                  onClick={() => setActive(link.link)}
+                  onClick={() => {
+                    setActive(link.link);
+                    setOpenSideBar(false);
+                  }}
                   className={cn(
                     'flex items-center gap-2 text-neutral-300 hover:text-primary transition-colors duration-200 text-base',
                     active === link.link && 'text-primary',
