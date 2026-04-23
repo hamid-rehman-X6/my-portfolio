@@ -17,6 +17,7 @@ import { FORMSPREE_ENDPOINT } from '@/lib/formspree';
 
 const Contact = () => {
   const form = useForm<ContactFormValues>({
+    mode: 'onChange',
     defaultValues: {
       name: '',
       company: '',
@@ -35,6 +36,7 @@ const Contact = () => {
         },
         body: JSON.stringify(values),
       });
+      console.log(response);
       if (response.ok) {
         form.reset();
         alert('Message sent successfully!');
@@ -73,16 +75,18 @@ const Contact = () => {
             <FormField
               control={form.control}
               name='name'
-              render={({ field }) => (
+              rules={{ required: 'Name is required' }}
+              render={({ field, fieldState }) => (
                 <FormItem className='w-full'>
                   <FormControl>
                     <Input
                       placeholder='Your name'
                       className='border-0'
+                      aria-invalid={!!fieldState.error}
                       {...field}
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage>{fieldState.error?.message}</FormMessage>
                 </FormItem>
               )}
             />
@@ -91,16 +95,17 @@ const Contact = () => {
             <FormField
               control={form.control}
               name='company'
-              render={({ field }) => (
+              render={({ field, fieldState }) => (
                 <FormItem className='w-full'>
                   <FormControl>
                     <Input
                       placeholder='Company name'
                       className='border-0'
+                      aria-invalid={!!fieldState.error}
                       {...field}
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage>{fieldState.error?.message}</FormMessage>
                 </FormItem>
               )}
             />
@@ -109,17 +114,25 @@ const Contact = () => {
             <FormField
               control={form.control}
               name='email'
-              render={({ field }) => (
+              rules={{
+                required: 'Email is required',
+                pattern: {
+                  value: /^\S+@\S+$/i,
+                  message: 'Invalid email address',
+                },
+              }}
+              render={({ field, fieldState }) => (
                 <FormItem className='w-full'>
                   <FormControl>
                     <Input
                       type='email'
                       placeholder='name@example.com'
                       className='border-0'
+                      aria-invalid={!!fieldState.error}
                       {...field}
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage>{fieldState.error?.message}</FormMessage>
                 </FormItem>
               )}
             />
@@ -128,17 +141,18 @@ const Contact = () => {
             <FormField
               control={form.control}
               name='phone'
-              render={({ field }) => (
+              render={({ field, fieldState }) => (
                 <FormItem className='w-full'>
                   <FormControl>
                     <Input
                       type='tel'
                       placeholder='(123) 456-7890'
                       className='border-0'
+                      aria-invalid={!!fieldState.error}
                       {...field}
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage>{fieldState.error?.message}</FormMessage>
                 </FormItem>
               )}
             />
@@ -148,16 +162,18 @@ const Contact = () => {
           <FormField
             control={form.control}
             name='message'
-            render={({ field }) => (
+            rules={{ required: 'Message is required' }}
+            render={({ field, fieldState }) => (
               <FormItem className='w-full'>
                 <FormControl>
                   <Textarea
                     placeholder='Write your message ...'
                     className='border-0 h-32'
+                    aria-invalid={!!fieldState.error}
                     {...field}
                   />
                 </FormControl>
-                <FormMessage />
+                <FormMessage>{fieldState.error?.message}</FormMessage>
               </FormItem>
             )}
           />
@@ -166,8 +182,10 @@ const Contact = () => {
             className='cursor-pointer'
             type='submit'
             size='lg'
+            disabled={form.formState.isSubmitting}
+            aria-busy={form.formState.isSubmitting}
           >
-            Send Message
+            {form.formState.isSubmitting ? 'Sending...' : 'Send Message'}
           </Button>
         </form>
       </Form>
