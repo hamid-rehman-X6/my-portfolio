@@ -33,6 +33,8 @@ const Profile = () => {
               <a
                 key={i}
                 href={social.link}
+                target='_blank'
+                rel='noopener noreferrer'
                 className='border border-neutral-500 p-2 hover:text-primary rounded-full hover:border-primary transition duration-200'
               >
                 <Icon class={'size-4'} />

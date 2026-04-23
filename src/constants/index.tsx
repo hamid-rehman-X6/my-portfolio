@@ -31,10 +31,10 @@ import {
   User,
 } from 'lucide-react';
 
-import { LuFacebook } from 'react-icons/lu';
 import { LuInstagram } from 'react-icons/lu';
 import { LuTwitter } from 'react-icons/lu';
-import { LuYoutube } from 'react-icons/lu';
+import { LuLinkedin } from 'react-icons/lu';
+import { LuGithub } from 'react-icons/lu';
 
 /**
  * Assets
@@ -101,14 +101,14 @@ const navLinks: LinksType[] = [
 
 const socialLinks: LinksType[] = [
   {
-    icon: LuFacebook,
-    label: 'Facebook',
-    link: '/#',
+    icon: LuLinkedin,
+    label: 'LinkedIn',
+    link: 'https://www.linkedin.com/in/muhammadhamidrahman/',
   },
   {
-    icon: LuInstagram,
-    label: 'Instagram',
-    link: '/#',
+    icon: LuGithub,
+    label: 'GitHub',
+    link: 'https://github.com/hamid-rehman-X6',
   },
   {
     icon: LuTwitter,
@@ -116,9 +116,9 @@ const socialLinks: LinksType[] = [
     link: '/#',
   },
   {
-    icon: LuYoutube,
-    label: 'Youtube',
-    link: '/#',
+    icon: LuInstagram,
+    label: 'Instagram',
+    link: 'https://www.instagram.com/m.hamid_rehman/',
   },
 ];
 

@@ -66,6 +66,8 @@ const Sidebar = () => {
                   <a
                     key={i}
                     href={social.link}
+                    target='_blank'
+                    rel='noopener noreferrer'
                     className='hover:text-primary border-2 border-neutral-500 p-2 rounded-full hover:border-primary transition-colors duration-200'
                   >
                     <Icon class='size-4' />
