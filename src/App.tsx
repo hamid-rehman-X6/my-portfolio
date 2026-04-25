@@ -36,7 +36,7 @@ export const App = () => {
       <About />
       <Services />
       <Resume />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Contact />
     </main>
   );
