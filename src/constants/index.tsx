@@ -127,7 +127,7 @@ const projectsData: ProjectType[] = [
     imgSrc: projectImg1,
     title: 'Full Stack Enterprise Auction Platform',
     tags: ['Full Stack MERN Application'],
-    projectLink: '#',
+    projectLink: null,
   },
   {
     imgSrc: projectImg2,
@@ -139,13 +139,13 @@ const projectsData: ProjectType[] = [
     imgSrc: projectImg3,
     title: 'Smart Agent – AI-Powered Personal Assistant',
     tags: ['Langchain', 'RAG AI', 'OpenAI LLM', 'Python'],
-    projectLink: '#',
+    projectLink: null,
   },
   {
     imgSrc: projectImg4,
     title: 'Blog API',
     tags: ['Backend', 'REST API', 'Node.js', 'Typescript'],
-    projectLink: '#',
+    projectLink: null,
   },
   {
     imgSrc: projectImg5,

@@ -44,8 +44,11 @@ const Profile = () => {
         </div>
 
         <Button
-          className='mt-2'
+          className='mt-2 cursor-pointer'
           size='lg'
+          onClick={() => {
+            window.open('mailto:hamidrehman1012@gmail.com');
+          }}
         >
           Let's Work!
         </Button>

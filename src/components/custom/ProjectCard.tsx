@@ -3,6 +3,7 @@ import type { ProjectType } from '@/types';
 import { motion } from 'motion/react';
 
 const ProjectCard = ({ imgSrc, title, projectLink, tags }: ProjectType) => {
+  const isValid = !!projectLink;
   return (
     <>
       <motion.div
@@ -12,9 +13,10 @@ const ProjectCard = ({ imgSrc, title, projectLink, tags }: ProjectType) => {
         {' '}
         <figure className='overflow-hidden rounded-md'>
           <a
-            href={projectLink}
-            target='_blank'
+            href={isValid ? projectLink! : undefined}
+            target={isValid ? '_blank' : undefined}
             rel='noopener noreferrer'
+            onClick={(e) => !isValid && e.preventDefault()}
           >
             <img
               src={imgSrc}
