@@ -13,7 +13,6 @@ import { App } from '@/App.tsx';
 import Sidebar from '@/components/custom/Sidebar';
 import Floatingmenu from '@/components/custom/Floatingmenu';
 import Profile from '@/components/custom/Profile';
-import './bones/registry';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
