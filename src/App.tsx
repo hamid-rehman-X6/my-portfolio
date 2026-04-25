@@ -4,7 +4,7 @@ import Projects from '@/components/custom/Projects';
 import About from '@/components/custom/About';
 import Services from '@/components/custom/Services';
 import Resume from '@/components/custom/Resume';
-import Testimonials from '@/components/custom/Testimonials';
+// import Testimonials from '@/components/custom/Testimonials';
 import Contact from '@/components/custom/Contact';
 import Lenis from 'lenis';
 import { useEffect, useRef } from 'react';
