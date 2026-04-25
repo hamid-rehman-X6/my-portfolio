@@ -21,7 +21,9 @@ const ProjectCard = ({ imgSrc, title, projectLink, tags }: ProjectType) => {
             <img
               src={imgSrc}
               alt={title}
-              className='rounded-md w-full transition duration-500 hover:scale-115'
+              className='rounded-md w-full blur-sm transition duration-500 hover:scale-115'
+              loading='lazy'
+              onLoad={(e) => e.currentTarget.classList.remove('blur-sm')}
             />
           </a>
         </figure>

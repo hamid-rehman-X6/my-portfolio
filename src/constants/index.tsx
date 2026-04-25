@@ -40,11 +40,11 @@ import { LuGithub } from 'react-icons/lu';
  * Assets
  */
 // Projects
-import projectImg1 from '@/assets/images/auction_image_1.png';
-import projectImg2 from '@/assets/images/sportinerd_image_1.png';
-import projectImg3 from '@/assets/images/smart_agent.png';
-import projectImg4 from '@/assets/images/blog_api_image_2.png';
-import projectImg5 from '@/assets/images/fedcrim_thumbnail.png';
+import projectImg1 from '@/assets/images/webp/auction_image_1.webp';
+import projectImg2 from '@/assets/images/webp/sportinerd_image_1.webp';
+import projectImg3 from '@/assets/images/webp/smart_agent.webp';
+import projectImg4 from '@/assets/images/webp/blog_api_image_2.webp';
+import projectImg5 from '@/assets/images/webp/fedcrim_thumbnail.webp';
 
 // Tools
 import antigravity from '@/assets/images/tools/antigravity.svg';
