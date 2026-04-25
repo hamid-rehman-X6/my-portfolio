@@ -26,3 +26,4 @@ dist-ssr
 .vite
 .vscode
 .vscode/settings.json
+.env

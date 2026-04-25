@@ -22,7 +22,7 @@ const Hero = () => {
 
       <motion.h1
         variants={fadeUp}
-        className='text-4xl md:text-5xl lg:6xl mt-2 font-semibold max-w-3xl md:leading-16 capitalize'
+        className='text-4xl md:text-5xl lg:text-6xl mt-2 font-semibold max-w-3xl md:leading-16 capitalize'
       >
         I'm <span className='text-primary'>Hamid</span> Full Stack AI Software
         Engineer
@@ -40,7 +40,7 @@ const Hero = () => {
           asChild
         >
           <a
-            href='/my-portfolio/resume/Hamid_SE-26.pdf'
+            href={`${import.meta.env.BASE_URL}resume/Hamid_SE-26.pdf`}
             target='_blank'
             rel='noopener noreferrer'
           >
