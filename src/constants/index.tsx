@@ -189,6 +189,12 @@ const experience: ExperienceType[] = [
     institute: 'Convier Solutions',
     desc: 'Developing scalable web applications, optimizing performance, and contributing to system design and maintainable code architecture.',
   },
+  {
+    year: '2026 – Present',
+    title: 'Associate Software Engineer - II',
+    institute: 'Techanzy Limited',
+    desc: 'Working as a full-stack developer on the company’s surveillance system product, implementing payment gateway integrations, credit flow management, AI-powered image analysis/optimization features, and scalable web application architecture.',
+  },
 ];
 
 const tools: ToolsType[] = [
